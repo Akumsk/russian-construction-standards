@@ -1,0 +1,9 @@
+PyMuPDF==1.24.13
+Pillow==11.1.0
+opencv-python==4.11.0.86
+numpy==1.26.4
+tqdm==4.67.1
+easyocr==1.7.2
+torch==2.6.0
+openai==1.59.3
+langchain==0.3.7
