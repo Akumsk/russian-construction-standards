@@ -70,26 +70,39 @@ Each standard is described in a JSON file with the following structure:
 
 ```json
 {
-  "filename": "Свод правил 28.13330.2017.pdf",
-  "full_name": "СП 28.13330.2017 «СНиП 2.03.11-85 Защита строительных конструкций от коррозии»",
-  "number": "28.13330.2017",
-  "date_issue": "2017-08-28",
-  "document_type": "Свод правил",
-  "language": "Russian",
-  "category": "Конструкции",
-  "source": "СП 28.13330.2017.pdf",
-  "total_pages": 118,
-  "status": "Действует",
+  "filename": "Свод правил 28.13330.2017.pdf",  // File name, generated based on LLM analysis as: Document Type + Number
+
+  "full_name": "СП 28.13330.2017 «СНиП 2.03.11-85 Защита строительных конструкций от коррозии»",  // Full document title, assigned based on LLM analysis
+
+  "number": "28.13330.2017", // Document number, extracted based on LLM analysis
+
+  "date_issue": "2017-08-28", // Latest available date (of publication, revision, or update), determined through LLM analysis
+
+  "document_type": "Свод правил", // Document type, extracted using LLM analysis
+
+  "language": "Russian", // Document language, inferred via LLM analysis
+
+  "category": "Конструкции", // Document category, equivalent to its section or domain, assigned through LLM analysis
+
+  "source": "СП 28.13330.2017.pdf", // Original PDF file name before renaming
+
+  "total_pages": 118, // Total number of pages in the document
+
+  "status": "Действует", // Document status (e.g., active, obsolete, etc.)
+
   "pages": [
     {
-      "page": 1,
-      "page_content": "..."
+      "page": 1, // Page number (based on PDF file, may differ from internal standard page numbering)
+
+      "page_content": "..." // Extracted text content of the page
     },
     {
-      "page": 2,
-      "page_content": "..."
+      "page": 2, // Page number (based on PDF file, may differ from internal standard page numbering)
+
+      "page_content": "..." // Extracted text content of the page
     }
   ]
 }
+
 
 
