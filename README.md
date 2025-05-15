@@ -1,5 +1,4 @@
 # Russian Construction Dataset
-
 📚 An open metadata dataset of widely used Russian construction standards.
 
 This repository provides structured JSON metadata for Russian construction norms and rules (e.g., СП, СНиП, ГОСТ), without distributing the full PDF documents themselves. It is designed to be a collaborative, searchable knowledge base for engineers, researchers, and developers working with Russian regulatory standards.
@@ -28,7 +27,6 @@ russian-construction-dataset/
 
 
 ## 🤝 Contributing
-
 We welcome and encourage community contributions!
 If you'd like to add a new document metadata file, you have two options:
 
@@ -55,8 +53,11 @@ We also encourage contributions to enhance the OCR extraction process, including
 Your support helps make this project more comprehensive and valuable to the community.
 
 ## ⚠️ Disclaimer
-This repository contains only metadata describing Russian construction standards (e.g., title, number, category, issuance date, etc.) and does not include the original PDF documents.
-All referenced standards are the intellectual property of their respective organizations or government bodies. This project does not claim ownership of the underlying documents. Users are responsible for ensuring legal compliance when accessing or using the full versions of these documents from official sources.
+All standards referenced in this dataset were obtained from publicly accessible sources believed to be available under open access. 
+All referenced standards are the intellectual property of their respective organizations or government bodies. 
+If you are the copyright holder of any material referenced in this repository and believe that your rights have been violated, please contact the repository maintainer immediately. 
+Upon verification of the claim, the content in question will be promptly removed or corrected to comply with intellectual property laws.
+This project does not claim ownership of the underlying documents. Users are responsible for ensuring legal compliance when accessing or using the full versions of these documents from official sources.
 
 ## 📜 License
 Code in this repository is licensed under the MIT License.
