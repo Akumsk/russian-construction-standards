@@ -7,17 +7,23 @@ This repository provides structured JSON metadata for Russian construction norms
 ---
 
 ## 🗂 Repository Structure
+
+```
 russian-construction-dataset/
 ├── metadata/
-│ ├── SP_28.13330.2017.json
-│ └── ...
+│   ├── SP_28.13330.2017.json
+│   └── ...
 ├── code/
-│ ├── create_dataset.py
-│ ├── check_document_status.py
-│ └── ...
+│   ├── create_dataset.py
+│   ├── check_document_status.py
+│   └── ...
+├── pdf_docs/
+│   └── ...
 ├── LICENSE
 ├── LICENSE_METADATA.md
 └── README.md
+```
+
 
 ## 🤝 Contributing
 We welcome community contributions! To submit a new document metadata file:
