@@ -2,6 +2,8 @@
 
 📚 An open metadata dataset of widely used Russian construction standards.
 
+This repository provides structured JSON metadata for Russian construction norms and rules (e.g., СП, СНиП, ГОСТ), without distributing the full PDF documents themselves. It is designed to be a collaborative, searchable knowledge base for engineers, researchers, and developers working with Russian regulatory standards.
+
 ⚠️ Note: The dataset includes only plain text content extracted either directly or via a simple OCR process. It does not contain any graphical elements such as illustrations, engineering diagrams, or formatting structures. Mathematical formulas and technical schemas are also extracted as plain text and may lack their original visual representation.
 
 ---
