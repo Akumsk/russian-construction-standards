@@ -9,7 +9,6 @@ import time
 from tqdm import tqdm
 from PIL import Image, ImageOps, ImageFilter
 import openai
-from langchain.schema import Document
 import check_document_status
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
