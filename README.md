@@ -39,7 +39,7 @@ If you'd like to add a new document metadata file, you have two options:
 - Submit a pull request with a brief description of your changes.
 
 ### 📤 2. Upload Only
-- Simply upload the original PDF file of the Russian construction standard.
+- Simply upload the original PDF file of the Russian construction standard in `pdf_docs/` folder.
 - Our team will handle the extraction and metadata creation on your behalf.
 All submissions are reviewed before being merged.
 ---
