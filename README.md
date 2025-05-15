@@ -28,11 +28,31 @@ russian-construction-dataset/
 
 
 ## 🤝 Contributing
-We welcome community contributions! To submit a new document metadata file:
-Fork the repository.
-Add your JSON file in the metadata/ folder.
-Make sure it follows the structure and field naming convention.
-Submit a pull request. All contributions are reviewed before approval.
+
+We welcome and encourage community contributions!
+If you'd like to add a new document metadata file, you have two options:
+
+### 📄 1. Manual Submission
+- Generate a JSON file from the original PDF using the methods provided in the `code/` folder.
+- Fork this repository.
+- Add your JSON file to the `metadata/` directory.
+- Submit a pull request with a brief description of your changes.
+
+### 📤 2. Upload Only
+- Simply upload the original PDF file of the Russian construction standard.
+- Our team will handle the extraction and metadata creation on your behalf.
+All submissions are reviewed before being merged.
+---
+
+### 🛠️ OCR & Extraction Improvements
+We also encourage contributions to enhance the OCR extraction process, including:
+
+- Improving text recognition accuracy.
+- Extracting tables and structured data.
+- Converting mathematical formulas to LaTeX or other structured formats.
+- Preserving diagrams, schemas, and visual layouts as accurately as possible.
+
+Your support helps make this project more comprehensive and valuable to the community.
 
 ## ⚠️ Disclaimer
 This repository contains only metadata describing Russian construction standards (e.g., title, number, category, issuance date, etc.) and does not include the original PDF documents.
