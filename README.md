@@ -70,36 +70,49 @@ Each standard is described in a JSON file with the following structure:
 
 ```json
 {
-  "filename": "Свод правил 28.13330.2017.pdf",  # File name, generated based on LLM analysis as: Document Type + Number
+  "filename": "Свод правил 28.13330.2017.pdf",  // File name generated based on analysis: Document Type + Number
 
-  "full_name": "СП 28.13330.2017 «СНиП 2.03.11-85 Защита строительных конструкций от коррозии»",  # Full document title, assigned based on LLM analysis
+  "full_name": "Защита строительных конструкций от коррозии",  // Complete title of the document in original language, formatted in Title Case based on provided rules
 
-  "number": "28.13330.2017", # Document number, extracted based on LLM analysis
+  "number": "28.13330.2017", // Document's official reference number, exactly as it appears in the document
 
-  "date_issue": "2017-08-28", # Latest available date (of publication, revision, or update), determined through LLM analysis
+  "date_issue": "2017-08-28", // Latest available publication or revision date in ISO format
 
-  "document_type": "Свод правил", # Document type, extracted using LLM analysis
+  "type": "Свод правил", // High-level document classification in original language
 
-  "language": "Russian", # Document language, inferred via LLM analysis
+  "language": "Russian", // Primary language of the document text
 
-  "category": "Конструкции", # Document category, equivalent to its section or domain, assigned through LLM analysis
+  "category": "Конструкции", // Document's relevant construction or design category in original language
 
-  "source": "СП 28.13330.2017.pdf", # Original PDF file name before renaming
+  "revision": "с изменениями №2", // Optional field indicating document revision or amendment status
 
-  "total_pages": 118, # Total number of pages in the document
+  "scope": "Устанавливает требования к проектированию бетонных и железобетонных конструкций зданий и сооружений.", // Brief description covering the document's regulatory scope
 
-  "status": "Действует", # Document status (e.g., active, obsolete, etc.)
+  "keywords": ["бетон", "железобетон", "конструкции"], // List of key terms describing the content in original language
+
+  "confidence_scores": { // Confidence scores (0-1) for each extracted metadata field
+    "full_name": 0.98,
+    "number": 0.95,
+    "date_issue": 0.96,
+    "type": 0.97,
+    "category": 0.93,
+    "revision": 0.88
+  },
+
+  "source": "СП 28.13330.2017.pdf", // Original PDF filename before renaming
+
+  "total_pages": 118, // Total number of pages in the document
+
+  "status": "Действует", // Document status (e.g., active, obsolete)
 
   "pages": [
     {
-      "page": 1, # Page number (based on PDF file, may differ from internal standard page numbering)
-
-      "page_content": "..." # Extracted text content of the page
+      "page": 1, // PDF file page number (may differ from internal numbering)
+      "page_content": "..." // Extracted text content of the page
     },
     {
-      "page": 2, # Page number (based on PDF file, may differ from internal standard page numbering)
-
-      "page_content": "..." # Extracted text content of the page
+      "page": 2,
+      "page_content": "..."
     }
   ]
 }
