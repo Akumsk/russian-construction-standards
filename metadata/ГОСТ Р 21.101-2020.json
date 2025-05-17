@@ -6,7 +6,7 @@
     "document_type": "ГОСТ Р",
     "language": "Russian",
     "category": "Конструкции",
-    "source": "ГОСТ 21.101-2020.pdf",
+    "source": "gost_r_21101-2020_osnovnye_trebovaniya_k_proektnoj_i_rabochej_dokumentacii.pdf",
     "total_pages": 69,
     "status": "Действует",
     "pages": [
@@ -290,7 +290,7 @@
     "confidence_scores": {
         "full_name": 0.95,
         "number": 0.98,
-        "date_issue": 0.98,
+        "date_issue": 0.99,
         "type": 0.99,
         "category": 0.85
     }
