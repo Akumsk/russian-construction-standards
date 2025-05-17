@@ -6,7 +6,7 @@
     "document_type": "Правила",
     "language": "Russian",
     "category": "Электроустановки",
-    "source": "ПУЭ.pdf",
+    "source": "Правила ПУЭ.pdf",
     "total_pages": 461,
     "status": "Неопределен",
     "pages": [
@@ -1854,5 +1854,11 @@
             "page": 461,
             "page_content": "?ГФ 8 1 Ш\n^  ш ш л  i т д а т ш  л  iiw iw от ими d ia\n.^......:::.,/• * \n..... :..... \n... \n- ::: \ngHj...,.,^;;\n:;}i^i<nM i«ii>ivimvii>in>vim'n<f>>mfimffTM i4funAn'№fW '>>*>n>*imM wii»iffiiM «TM T4i«iiRM W Tvwiii>4'>>>vttf}ift>ntfviT4i\n4Vtvrwn>t\\!*iatX1\n:................ \n. >22=:at=: .............................\ntiiiiUttii»\n1ПИ1Й1ШЯЛИ11МП1Я11М\n: : = \nillljjjlllM -SIS^liiili |j | ?!! ^''j j ” j |\n' Ц j\" - --i i I j J \"j; \n------ №кД1'1' Jlliili'-i;1 J hi . • t: \n*\n0101010101010101320101010101010101\n^\n5323534823535323232323535323234853\n5348482353235323482323532353\nПУЭ"
         }
-    ]
+    ],
+    "confidence_scores": {
+        "full_name": 0.9,
+        "type": 0.8,
+        "category": 0.7,
+        "language": 1.0
+    }
 }
