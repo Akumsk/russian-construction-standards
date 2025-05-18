@@ -166,15 +166,22 @@ def get_document_info_from_llm(text, file_name):
                         "type": "string",
                         "description": (
                             "The complete title of the document in its original language. "
-                            "Examples: 'Системы противопожарной защиты электроустановки низковольтные. Требования пожарной безопасности', "
-                            "'Ограждения металлические лестниц, балконов, крыш, лестничных маршей и площадок. Общие технические условия', "
-                            "'Bетонные и железобетонные конструкции. Основные положения'"
+                            "Do not include the document number and document type in the full_name. "
+                            "ALWAYS convert text that appears in ALL CAPS to Title Case (first letter of each significant word capitalized) "
+                            "Do not use ALL CAPITAL letters in the full_name, even if they appear this way in the original document "
+                            "Preserve the original capitalization only for acronyms, chemical formulas, and proper nouns that should remain capitalized "
+                            "Examples: "
+                            "- 'ГОСТ 14098-2014 СОЕДИНЕНИЯ СВАРНЫЕ АРМАТУРЫ И ЗАКЛАДНЫХ ИЗДЕЛИЙ ЖЕЛЕЗОБЕТОННЫХ КОНСТРУКЦИЙ' → 'Соединения сварные арматуры и закладных изделий железобетонных конструкций' "
+                            "- 'МЕТОДЫ КОНТРОЛЯ КАЧЕСТВА СВАРНЫХ СОЕДИНЕНИЙ СТАЛЬНЫХ КОНСТРУКЦИЙ' → 'Методы контроля качества сварных соединений стальных конструкций' "
+                            "- 'Свод правил СП 107.13330.2012   Теплицы и парники' → 'Теплицы и парники' "
                         )
                     },
                     "number": {
                         "type": "string",
                         "description": (
                             "The document's official reference number or identifier code. "
+                            "Extract the full, exact number as it appears in the document. "
+                            "This will be cleaned later to include only digits, dots, and hyphens. "
                             "Examples: '462.1325800.2019', "
                             "'317.1325800.2017', "
                             "'10922-2012', "
@@ -183,20 +190,21 @@ def get_document_info_from_llm(text, file_name):
                     },
                     "date_issue": {
                         "type": "string",
+                        "format": "date",
                         "description": (
-                            "The latest date of publication, issue or update of the document in any consistent format. "
+                            "The latest date of publication, issue or update of the document in ISO format (YYYY-MM-DD). "
+                            "If only year is available, use YYYY format. If year and month, use YYYY-MM format. "
                             "If multiple dates are present, ALWAYS choose the most recent date. "
                             "Check carefully for update dates, revisions, or amendments that may be more recent than the original publication date. "
                             "For Russian documents, look for 'Дата введения', 'Дата актуализации', 'Дата введения изменения', 'с изменениями', or similar phrases. "
-                            "Examples: '2019', "
-                            "'2017-01', "
-                            "'2020-01-01'"
+                            "Examples: '2019', '2017-01', '2020-01-01'"
                         )
                     },
                     "type": {
                         "type": "string",
                         "description": (
                             "The high-level classification of the document type. Always provide result in original language. "
+                            "This value will be used in file naming together with the document number (type number.pdf). "
                             "Examples:  'Свод правил', 'ГОСТ', 'СанПин', 'Технический регламент', 'Пособие', 'Федеральный закон', "
                             "'Кодекс', 'Постановление', 'Указ', 'Приказ', 'Пояснение', 'Правила."
                         )
@@ -217,7 +225,39 @@ def get_document_info_from_llm(text, file_name):
                             "The primary language of the provided document text. "
                             "Examples: 'English', 'French', 'Spanish', 'Indonesian', 'Russian'"
                         )
-                    }
+                    },
+                    "revision": {
+                        "type": "string",
+                        "description": "Optional. Revision or amendment status if available (e.g., 'с изменениями №2', 'Измененная редакция', 'Изм. N 1', 'Изм.3')."
+                    },
+                    "scope": {
+                        "type": "string",
+                        "description": (
+                            "A brief description (1-3 sentences) of what the document covers or regulates. "
+                            "Example: 'Устанавливает требования к проектированию бетонных и железобетонных конструкций зданий и сооружений.'"
+                        )
+                    },
+                    "keywords": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "description": (
+                            "Key terms or phrases that describe the document's content. These should be in the original language. "
+                            "Examples: ['бетон', 'железобетон', 'конструкции']"
+                        )
+                    },
+                    "confidence_scores": {
+                    "type": "object",
+                    "properties": {
+                        "full_name": { "type": "number", "minimum": 0, "maximum": 1 },
+                        "number": { "type": "number", "minimum": 0, "maximum": 1 },
+                        "date_issue": { "type": "number", "minimum": 0, "maximum": 1 },
+                        "type": { "type": "number", "minimum": 0, "maximum": 1 },
+                        "category": { "type": "number", "minimum": 0, "maximum": 1 },
+                        "revision": { "type": "number", "minimum": 0, "maximum": 1 },
+                    },
+                    "description": "Confidence scores (0-1) for each extracted metadata field"
+                }
+
                 },
                 "required": [
                     "full_name",
